@@ -219,8 +219,9 @@
   <entry>
     <title>rem适配布局</title>
     <url>/2021/03/15/rem%E9%80%82%E9%85%8D%E5%B8%83%E5%B1%80/</url>
-    <content><![CDATA[<span id="more"></span>
-<h3 id="rem基础"><a href="#rem基础" class="headerlink" title="rem基础"></a>rem基础</h3><p>rem（root em）是相对单位，类似于em，em 是相对于父元素字体的大小；</p>
+    <content><![CDATA[<h3 id="rem基础"><a href="#rem基础" class="headerlink" title="rem基础"></a>rem基础</h3><p>rem（root em）是相对单位，类似于em，em 是相对于父元素字体的大小；</p>
+<span id="more"></span>
+
 <p>不同的是 rem 的<strong>基准</strong>是相对于 <strong><html></html></strong> 元素的字体大小；</p>
 <p>比如，根元素（html）设置 font-size: 12px，非根元素设置 width: 2rem，换算成 px 就是24px。</p>
 <p><strong>rem优点：</strong></p>

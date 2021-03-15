@@ -211,7 +211,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-03-15 16:54:40 / 修改时间：16:56:21" itemprop="dateCreated datePublished" datetime="2021-03-15T16:54:40+08:00">2021-03-15</time>
+              <time title="创建时间：2021-03-15 16:54:40 / 修改时间：16:59:23" itemprop="dateCreated datePublished" datetime="2021-03-15T16:54:40+08:00">2021-03-15</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -234,90 +234,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <span id="more"></span>
-<h3 id="rem基础"><a href="#rem基础" class="headerlink" title="rem基础"></a>rem基础</h3><p>rem（root em）是相对单位，类似于em，em 是相对于父元素字体的大小；</p>
-<p>不同的是 rem 的<strong>基准</strong>是相对于 <strong><html></html></strong> 元素的字体大小；</p>
-<p>比如，根元素（html）设置 font-size: 12px，非根元素设置 width: 2rem，换算成 px 就是24px。</p>
-<p><strong>rem优点：</strong></p>
-<ul>
-<li>通过改变根元素html的文字大小，来改变页面中元素的大小；</li>
-<li>可以整体控制</li>
-</ul>
-<p>但是HTML一般是写死的，如果需要根据屏幕宽度动态改变html的字体大小，需要借助媒体查询@media来动态改变。</p>
-<h3 id="媒体查询（Media-Query）"><a href="#媒体查询（Media-Query）" class="headerlink" title="媒体查询（Media Query）"></a>媒体查询（Media Query）</h3><ul>
-<li>使用 @media 查询，可以针对不同的媒体类型定义不同的样式；</li>
-<li>可以针对不同屏幕尺寸，设置不同的样式；</li>
-</ul>
-<h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a><strong>语法</strong></h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@media</span> mediatype <span class="keyword">and</span>|<span class="keyword">not</span>|<span class="keyword">only</span> ( media feature ) &#123;</span><br><span class="line">    css <span class="selector-tag">code</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>用@media开头，定义媒体查询；</li>
-<li>mediatype 表示媒体类型；</li>
-<li>关键字 and  not  only；</li>
-<li>media feature <strong>媒体特性</strong> 必须要有小括号包含；</li>
-</ul>
-<h4 id="mediatype"><a href="#mediatype" class="headerlink" title="**mediatype **"></a>**mediatype **</h4><p>将不同的终端设备划分成不同的类型，成为媒体类型</p>
-<table>
-<thead>
-<tr>
-<th>值</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>all</td>
-<td>用于所有设备</td>
-</tr>
-<tr>
-<td>print</td>
-<td>用于打印机和打印预览</td>
-</tr>
-<tr>
-<td>screen</td>
-<td>用于电脑屏幕、平板电脑、智能手机等</td>
-</tr>
-</tbody></table>
-<h4 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h4><p>关键字将媒体类型或多个媒体特性连接到一起，作为媒体查询条件。</p>
-<ul>
-<li>and： 可以将多个媒体特性连接到一起，相当于“且”的意思；</li>
-<li>not：排除某个媒体类型</li>
-<li>only：制定某个特定的媒体类型</li>
-</ul>
-<h4 id="媒体特性"><a href="#媒体特性" class="headerlink" title="媒体特性"></a>媒体特性</h4><p>每种媒体类型都具有各自不同的特性，根据不同媒体类型的媒体查询，设置不同的展示风格。</p>
-<p>暂且了解3个：</p>
-<table>
-<thead>
-<tr>
-<th>值</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>width</td>
-<td>定义输出设备中，页面可见区域的宽度</td>
-</tr>
-<tr>
-<td>min-widht</td>
-<td>定义输出设备中，页面最小可见区域宽度</td>
-</tr>
-<tr>
-<td>max-width</td>
-<td>定义输出设备中，页面最大可见区域宽度</td>
-</tr>
-</tbody></table>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">539px</span>) &#123;</span><br><span class="line">    <span class="selector-tag">body</span> &#123;</span><br><span class="line">        <span class="attribute">background</span>: blue;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> ( <span class="attribute">min-width</span>:<span class="number">540px</span>) <span class="keyword">and</span> (<span class="attribute">max-width</span>:<span class="number">969px</span> )&#123;</span><br><span class="line">    <span class="selector-tag">body</span> &#123;</span><br><span class="line">        <span class="attribute">background</span>: green;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">min-width</span>: <span class="number">969px</span>) &#123;</span><br><span class="line">    <span class="selector-tag">body</span> &#123;</span><br><span class="line">        <span class="attribute">background</span>: pink;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>为简洁代码，从小到大的顺序书写。</p>
-<h4 id="利用媒体查询动态改变rem"><a href="#利用媒体查询动态改变rem" class="headerlink" title="利用媒体查询动态改变rem"></a>利用媒体查询动态改变rem</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">header</span>&gt;</span>购物车<span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 动态改变html根元素的字体大小 */</span></span><br><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">min-width</span>: <span class="number">320px</span>) &#123;</span><br><span class="line">    <span class="selector-tag">html</span> &#123;</span><br><span class="line">        <span class="attribute">font-size</span>: <span class="number">50px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> ( <span class="attribute">min-width</span>:<span class="number">640px</span>)&#123;</span><br><span class="line">    <span class="selector-tag">html</span> &#123;</span><br><span class="line">        <span class="attribute">font-size</span>: <span class="number">100px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">min-width</span>: <span class="number">320px</span>;</span><br><span class="line">  <span class="attribute">max-width</span>: <span class="number">640px</span>; </span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">header</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">1rem</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: .<span class="number">5rem</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: green;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">1rem</span>;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="利用媒体查询引入资源"><a href="#利用媒体查询引入资源" class="headerlink" title="利用媒体查询引入资源"></a>利用媒体查询引入资源</h4><p>针对大屏幕写了一套CSS文件，针对小屏幕写了一套CSS文件；</p>
-<p>原理：直接在link 中判断设备的尺寸，然后引入不同的 CSS 文件。</p>
-<p><strong>语法</strong></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 320引入的样式 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;style320.css&quot;</span> <span class="attr">media</span>=<span class="string">&quot;screen and (min-width: 320px;)&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 640引入的样式 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;style640.css&quot;</span> <span class="attr">media</span>=<span class="string">&quot;screen and (min-width: 640px;)&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
+          <h3 id="rem基础"><a href="#rem基础" class="headerlink" title="rem基础"></a>rem基础</h3><p>rem（root em）是相对单位，类似于em，em 是相对于父元素字体的大小；</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/03/15/rem%E9%80%82%E9%85%8D%E5%B8%83%E5%B1%80/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
