@@ -2,21 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/categories/index.html</loc>
+    <loc>https://blog.touradon.cn/categories/index.html</loc>
     
     <lastmod>2021-03-15</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/tags/index.html</loc>
+    <loc>https://blog.touradon.cn/tags/index.html</loc>
     
     <lastmod>2021-03-15</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/2021/03/15/hello-world/</loc>
+    <loc>https://blog.touradon.cn/2021/03/15/hello-world/</loc>
     
     <lastmod>2021-03-14</lastmod>
     
@@ -24,7 +24,7 @@
   
 
   <url>
-    <loc>http://example.com/</loc>
+    <loc>https://blog.touradon.cn/</loc>
     <lastmod>2021-03-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>

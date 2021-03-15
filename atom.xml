@@ -3,11 +3,11 @@
   <title>TouradondのBlog</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://blog.touradon.cn/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://blog.touradon.cn/"/>
   <updated>2021-03-14T17:55:01.410Z</updated>
-  <id>http://example.com/</id>
+  <id>https://blog.touradon.cn/</id>
   
   <author>
     <name>Touradon</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2021/03/15/hello-world/"/>
-    <id>http://example.com/2021/03/15/hello-world/</id>
+    <link href="https://blog.touradon.cn/2021/03/15/hello-world/"/>
+    <id>https://blog.touradon.cn/2021/03/15/hello-world/</id>
     <published>2021-03-14T16:47:09.986Z</published>
     <updated>2021-03-14T17:55:01.410Z</updated>
     
