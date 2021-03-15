@@ -2,13 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.touradon.cn/2021/03/15/rem%E9%80%82%E9%85%8D%E5%B8%83%E5%B1%80/</loc>
-    
-    <lastmod>2021-03-15</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://blog.touradon.cn/2021/03/15/Felx%E5%B8%83%E5%B1%80/</loc>
     
     <lastmod>2021-03-15</lastmod>
@@ -24,6 +17,13 @@
   
   <url>
     <loc>https://blog.touradon.cn/tags/index.html</loc>
+    
+    <lastmod>2021-03-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.touradon.cn/2021/03/15/rem%E9%80%82%E9%85%8D%E5%B8%83%E5%B1%80/</loc>
     
     <lastmod>2021-03-15</lastmod>
     
