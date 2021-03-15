@@ -20,30 +20,36 @@
     var CONFIG = {"hostname":"blog.touradon.cn","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="效率工作，开心生活">
-<meta property="og:type" content="website">
-<meta property="og:title" content="TouradondのBlog">
-<meta property="og:url" content="https://blog.touradon.cn/index.html">
+  <meta name="description" content="rem基础rem（root em）是相对单位，类似于em，em 是相对于父元素字体的大小； 不同的是 rem 的基准是相对于  元素的字体大小； 比如，根元素（html）设置 font-size: 12px，非根元素设置 width: 2rem，换算成 px 就是24px。 rem优点：  通过改变根元素html的文字大小，来改变页面中元素的大小； 可以整体控制  但是HTML一般是写死的，如果">
+<meta property="og:type" content="article">
+<meta property="og:title" content="rem适配布局">
+<meta property="og:url" content="https://blog.touradon.cn/2021/03/15/rem%E9%80%82%E9%85%8D%E5%B8%83%E5%B1%80/index.html">
 <meta property="og:site_name" content="TouradondのBlog">
-<meta property="og:description" content="效率工作，开心生活">
+<meta property="og:description" content="rem基础rem（root em）是相对单位，类似于em，em 是相对于父元素字体的大小； 不同的是 rem 的基准是相对于  元素的字体大小； 比如，根元素（html）设置 font-size: 12px，非根元素设置 width: 2rem，换算成 px 就是24px。 rem优点：  通过改变根元素html的文字大小，来改变页面中元素的大小； 可以整体控制  但是HTML一般是写死的，如果">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-03-15T08:54:40.000Z">
+<meta property="article:modified_time" content="2021-03-15T08:56:21.087Z">
 <meta property="article:author" content="Touradon">
+<meta property="article:tag" content="CSS3">
+<meta property="article:tag" content="布局">
+<meta property="article:tag" content="rem">
+<meta property="article:tag" content="响应式">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://blog.touradon.cn/">
+<link rel="canonical" href="https://blog.touradon.cn/2021/03/15/rem%E9%80%82%E9%85%8D%E5%B8%83%E5%B1%80/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>TouradondのBlog</title>
+  <title>rem适配布局 | TouradondのBlog</title>
   
 
 
@@ -180,9 +186,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -198,10 +205,9 @@
       <meta itemprop="name" content="TouradondのBlog">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/15/rem%E9%80%82%E9%85%8D%E5%B8%83%E5%B1%80/" class="post-title-link" itemprop="url">rem适配布局</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          rem适配布局
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -234,7 +240,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <span id="more"></span>
+        <span id="more"></span>
 <h3 id="rem基础"><a href="#rem基础" class="headerlink" title="rem基础"></a>rem基础</h3><p>rem（root em）是相对单位，类似于em，em 是相对于父元素字体的大小；</p>
 <p>不同的是 rem 的<strong>基准</strong>是相对于 <strong><html></html></strong> 元素的字体大小；</p>
 <p>比如，根元素（html）设置 font-size: 12px，非根元素设置 width: 2rem，换算成 px 就是24px。</p>
@@ -318,96 +324,36 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 320引入的样式 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;style320.css&quot;</span> <span class="attr">media</span>=<span class="string">&quot;screen and (min-width: 320px;)&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 640引入的样式 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;style640.css&quot;</span> <span class="attr">media</span>=<span class="string">&quot;screen and (min-width: 640px;)&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/CSS3/" rel="tag"># CSS3</a>
+              <a href="/tags/%E5%B8%83%E5%B1%80/" rel="tag"># 布局</a>
+              <a href="/tags/rem/" rel="tag"># rem</a>
+              <a href="/tags/%E5%93%8D%E5%BA%94%E5%BC%8F/" rel="tag"># 响应式</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.touradon.cn/2021/03/15/Felx%E5%B8%83%E5%B1%80/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-      <meta itemprop="name" content="Touradon">
-      <meta itemprop="description" content="效率工作，开心生活">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="TouradondのBlog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/15/Felx%E5%B8%83%E5%B1%80/" class="post-title-link" itemprop="url">Felx布局</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-03-15 16:41:16 / 修改时间：16:56:15" itemprop="dateCreated datePublished" datetime="2021-03-15T16:41:16+08:00">2021-03-15</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS3/" itemprop="url" rel="index"><span itemprop="name">CSS3</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="1、Flex-布局体验"><a href="#1、Flex-布局体验" class="headerlink" title="1、Flex 布局体验"></a>1、Flex 布局体验</h2><p>flex 对行内元素或者行内块元素的影响？</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/03/15/Felx%E5%B8%83%E5%B1%80/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/03/15/Felx%E5%B8%83%E5%B1%80/" rel="prev" title="Felx布局">
+      <i class="fa fa-chevron-left"></i> Felx布局
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -460,6 +406,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#rem%E5%9F%BA%E7%A1%80"><span class="nav-number">1.</span> <span class="nav-text">rem基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2%EF%BC%88Media-Query%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">媒体查询（Media Query）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95"><span class="nav-number">2.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mediatype"><span class="nav-number">2.2.</span> <span class="nav-text">**mediatype **</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-number">2.3.</span> <span class="nav-text">关键字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AA%92%E4%BD%93%E7%89%B9%E6%80%A7"><span class="nav-number">2.4.</span> <span class="nav-text">媒体特性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%A9%E7%94%A8%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2%E5%8A%A8%E6%80%81%E6%94%B9%E5%8F%98rem"><span class="nav-number">2.5.</span> <span class="nav-text">利用媒体查询动态改变rem</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%A9%E7%94%A8%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2%E5%BC%95%E5%85%A5%E8%B5%84%E6%BA%90"><span class="nav-number">2.6.</span> <span class="nav-text">利用媒体查询引入资源</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
